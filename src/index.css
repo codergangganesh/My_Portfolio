@@ -7,7 +7,56 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  /* Light theme (default) */
   :root {
+    --background: 0 0% 100%;
+    --foreground: 232 24% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 232 24% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 232 24% 16%;
+
+    /* Light violet primary with pink accent */
+    --primary: 265 84% 62%; /* violet */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 20% 97%;
+    --secondary-foreground: 232 24% 16%;
+
+    --muted: 260 16% 97%;
+    --muted-foreground: 252 12% 35%;
+
+    --accent: 300 86% 66%; /* pink/magenta */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 262 28% 90%;
+    --input: 262 28% 90%;
+    --ring: 265 84% 62%;
+
+    --radius: 1rem;
+
+    /* Advanced design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(265 84% 62%) 0%, hsl(300 86% 66%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(300 86% 66%) 0%, hsl(320 86% 66%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(260 20% 98%) 100%);
+    --gradient-mesh: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(265 84% 62% / 0.18), transparent),
+                     radial-gradient(ellipse 60% 50% at 0% 50%, hsl(300 86% 66% / 0.14), transparent),
+                     radial-gradient(ellipse 60% 50% at 100% 50%, hsl(320 86% 66% / 0.12), transparent);
+    --shadow-glow: 0 0 40px hsl(265 84% 62% / 0.25);
+    --shadow-glow-lg: 0 0 70px hsl(265 84% 62% / 0.32);
+    --shadow-card: 0 10px 30px hsl(0 0% 0% / 0.06);
+    --shadow-elevated: 0 20px 50px hsl(0 0% 0% / 0.08);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Dark theme */
+  .theme-dark {
     --background: 220 25% 8%;
     --foreground: 210 40% 98%;
 

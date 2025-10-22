@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profileLogo from "@/assets/profile-logo.jpg";
+import Logo from "@/components/Logo";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,6 +27,7 @@ const Navigation = () => {
   const navItems = [
     { label: "About", id: "about" },
     { label: "Skills", id: "skills" },
+    { label: "Experience", id: "experience" },
     { label: "Projects", id: "projects" },
     { label: "Education", id: "education" },
     { label: "Contact", id: "contact" },
@@ -45,18 +47,9 @@ const Navigation = () => {
             onClick={() => scrollToSection("hero")}
             className="flex items-center gap-3 group"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-primary rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity animate-glow-pulse" />
-              <img
-                src={profileLogo}
-                alt="AI Student"
-                className="w-12 h-12 rounded-full object-cover border-2 border-primary relative z-10 group-hover:scale-110 transition-transform duration-300"
-              />
-            </div>
+            <Logo className="w-8 h-8" />
             <div className="hidden md:block">
-              <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent animate-float">
-                AI Student
-              </span>
+              <span className="text-lg font-bold">Mannam Ganesh Babu</span>
             </div>
           </button>
 
@@ -73,6 +66,9 @@ const Navigation = () => {
                 <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-primary transition-all group-hover:w-3/4 rounded-full" />
               </button>
             ))}
+            <div className="ml-2">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,15 +85,12 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden pt-4 pb-2 animate-fade-in">
-            <div className="flex items-center gap-2 mb-4 pb-4 border-b border-border">
-              <img
-                src={profileLogo}
-                alt="AI Student"
-                className="w-10 h-10 rounded-full object-cover border-2 border-primary"
-              />
-              <span className="text-base font-bold bg-gradient-primary bg-clip-text text-transparent">
-                AI Student
-              </span>
+            <div className="flex items-center justify-between gap-3 mb-4 pb-4 border-b border-border">
+              <div className="flex items-center gap-2">
+                <Logo className="w-7 h-7" />
+                <span className="text-base font-bold">Mannam Ganesh Babu</span>
+              </div>
+              <ThemeToggle />
             </div>
             {navItems.map((item) => (
               <button

@@ -17,7 +17,7 @@ const Hero = () => {
           <div className="flex justify-center md:justify-start">
             <div className="relative">
               <img
-                src="https://via.placeholder.com/600x600.png?text=Your+Photo"
+                src="/GANESH.jpg"
                 alt="Profile"
                 className="w-64 h-64 md:w-[26rem] md:h-[26rem] rounded-full object-cover ring-4 ring-primary/40 shadow-glow"
               />
@@ -27,14 +27,14 @@ const Hero = () => {
           {/* Right: Content */}
           <div className="text-center md:text-left space-y-6">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-              <span className="block">Your Name</span>
+              <span className="block">Mannam Ganesh Babu</span>
               <span className="block text-muted-foreground text-xl md:text-2xl font-medium mt-2">
-                Portfolio
               </span>
             </h1>
 
             <p className="text-base md:text-lg text-muted-foreground max-w-xl md:max-w-2xl mx-auto md:mx-0">
-              Brief introduction about you and what you do. Keep it concise for a clean, modern header.
+              Hi, I’m Mannam Ganesh Babu.
+              I’m a third-year B.E. Artificial Intelligence and Data Science student at Kalaignarkarunanidhi Institute of Technology (KIT), Coimbatore. I’m interested in learning about AI, data science, and how technology can be used to solve real-world problems. This portfolio showcases my projects, skills, and what I’ve learned during my studies.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 md:justify-start justify-center pt-2">
@@ -58,9 +58,9 @@ const Hero = () => {
 
             <div className="flex gap-4 md:justify-start justify-center pt-4">
               {[
-                { href: "https://github.com", icon: Github, label: "GitHub" },
-                { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-                { href: "mailto:your.email@example.com", icon: Mail, label: "Email" },
+                { href: "https://github.com/codergangganesh", icon: Github, label: "GitHub" },
+                { href: "https://www.linkedin.com/in/mannam-ganeshbabu-5a19ab291/", icon: Linkedin, label: "LinkedIn" },
+                { href: "mailto:mannamganeshbabu8@gmail.com", icon: Mail, label: "Email" },
               ].map((social, index) => (
                 <a
                   key={index}
@@ -77,9 +77,9 @@ const Hero = () => {
 
             <div className="grid grid-cols-3 gap-6 max-w-md md:max-w-lg md:mx-0 mx-auto pt-4">
               {[
-                { value: "15+", label: "Projects" },
+                { value: "10+", label: "Projects" },
                 { value: "8+", label: "Technologies" },
-                { value: "3.8", label: "GPA" },
+                { value: "8.5", label: "GPA" },
               ].map((stat, index) => (
                 <div
                   key={index}

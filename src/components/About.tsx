@@ -1,5 +1,6 @@
-import { Brain, Code2, Lightbulb, Rocket, Zap, Target } from "lucide-react";
+import { Brain, Code2, Lightbulb, Rocket, Zap, Target, Linkedin } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   const highlights = [
@@ -41,7 +42,19 @@ const About = () => {
             <span className="text-sm font-semibold text-primary uppercase tracking-wider px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
               About Me
             </span>
+            <div className="mt-6 flex justify-center">
+            <a
+              href="https://www.linkedin.com/in/mannam-ganeshbabu-5a19ab291/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button className="px-6 py-5 rounded-xl bg-gradient-primary hover:shadow-glow-lg group">
+                <Linkedin className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Connect on LinkedIn
+              </Button>
+            </a>
           </div>
+        </div>
           <h2 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
             Driven by{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
@@ -98,24 +111,7 @@ const About = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="grid md:grid-cols-4 gap-6 animate-fade-in">
-          {[
-            { label: "Years Experience", value: "3+" },
-            { label: "AI Projects", value: "12+" },
-            { label: "Research Papers", value: "5+" },
-            { label: "Technologies", value: "20+" },
-          ].map((stat, index) => (
-            <Card
-              key={index}
-              className="p-6 text-center bg-card/30 backdrop-blur-xl border-border/30 hover:border-primary/50 transition-all duration-500 hover:shadow-glow group"
-            >
-              <div className="text-4xl font-black bg-gradient-primary bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
-                {stat.value}
-              </div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </Card>
-          ))}
-        </div>
+        
       </div>
     </section>
   );
