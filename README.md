@@ -1,106 +1,124 @@
-# Welcome to your Lovable project
+# Professional Portfolio Website
 
-## Project info
+![Portfolio Preview](public/placeholder.svg)
 
-**URL**: https://lovable.dev/projects/82482a5d-665f-47f7-9da5-97310414d1c9
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Showcases projects, skills, experience, and certifications with elegant UI components.
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+- **Responsive Design**: Works seamlessly across all devices
+- **Modern UI**: Clean, professional design with smooth animations
+- **Interactive Components**: Flip cards, typing animations, and hover effects
+- **Contact Form**: Functional email system using EmailJS
+- **Performance Optimized**: Fast loading and smooth navigation
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/82482a5d-665f-47f7-9da5-97310414d1c9) and start prompting.
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, shadcn/ui
+- **UI Components**: Radix UI primitives
+- **Form Handling**: React Hook Form
+- **Validation**: Zod
+- **Deployment**: Lovable.dev
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📦 Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (v16 or higher)
+- npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Environment Variables
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Create a `.env` file in the root directory with the following variables:
 
-**Use GitHub Codespaces**
+```env
+# EmailJS Configuration
+# Sign up at https://www.emailjs.com/ to get these credentials
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Building for Production
 
-## What technologies are used for this project?
+```bash
+# Build for production
+npm run build
 
-This project is built with:
+# Preview production build
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🎨 Project Structure
 
-## Contact Form Functionality
+```
+src/
+├── assets/           # Images and static assets
+├── components/       # Reusable UI components
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions
+├── pages/            # Page components
+└── App.tsx           # Main application component
+```
 
-The contact form is now fully functional and sends real emails using EmailJS.
+## 📧 Contact Form Setup
 
-Your contact details:
-- **Email**: mannamganeshbabu8@gmail.com
-- **Phone**: +91 7670895485
-- **Location**: Coimbatore, 641402, Kannampalayam
+The contact form uses EmailJS to send real emails. To configure:
 
-When visitors submit the contact form, you will receive an email at mannamganeshbabu8@gmail.com with their message. The email will include:
-- The visitor's name
-- The visitor's email address
-- **The full content of their message from the textarea**
-- Proper reply-to headers so you can easily respond
+1. Sign up at [EmailJS](https://www.emailjs.com/)
+2. Create an email service and template
+3. Update the environment variables in your `.env` file
+4. Ensure your EmailJS template uses these parameter names:
+   - `from_name` - Sender's name
+   - `from_email` - Sender's email
+   - `message` - Message content
+   - `to_email` - Your email address
+   - `reply_to` - Reply-to header
 
-### Setting Up EmailJS Template
+## 🌐 Deployment
 
-To ensure the contact form works correctly:
-1. Follow the instructions in [EMAILJS_TEMPLATE_SETUP.md](EMAILJS_TEMPLATE_SETUP.md)
-2. Make sure your EmailJS template uses the correct parameter names:
-   - `from_name` for the sender's name
-   - `from_email` for the sender's email
-   - `message` for the textarea content (this is what you're asking about)
-   - `to_email` for your email address
-   - `reply_to` for proper reply functionality
+Deploy directly from Lovable:
 
-### Troubleshooting Email Issues
+1. Open your [Lovable Project](https://lovable.dev/projects/82482a5d-665f-47f7-9da5-97310414d1c9)
+2. Click on Share → Publish
 
-If you encounter authentication errors with EmailJS:
-1. Check [EMAILJS_GMAIL_FIX.md](EMAILJS_GMAIL_FIX.md) for solutions
-2. The most common issue is insufficient Gmail authentication scopes
-3. You may need to re-authenticate your Gmail account or use EmailJS SMTP service
+### Custom Domain
 
-## How can I deploy this project?
+To connect a custom domain:
+1. Navigate to Project > Settings > Domains
+2. Click Connect Domain
+3. Follow the DNS configuration instructions
 
-Simply open [Lovable](https://lovable.dev/projects/82482a5d-665f-47f7-9da5-97310414d1c9) and click on Share -> Publish.
+## 📄 License
 
-## Can I connect a custom domain to my Lovable project?
+This project is proprietary and confidential. All rights reserved.
 
-Yes, you can!
+## 👤 Author
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**Manangaraj Babu**
+- Email: mannamganeshbabu8@gmail.com
+- Phone: +91 7670895485
+- Location: Coimbatore, 641402, Kannampalayam
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+<div align="center">
+  <sub>Built with ❤️ using React, TypeScript, and Tailwind CSS</sub>
+</div>
