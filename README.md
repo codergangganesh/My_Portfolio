@@ -60,6 +60,39 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Contact Form Functionality
+
+The contact form is now fully functional and sends real emails using EmailJS.
+
+Your contact details:
+- **Email**: mannamganeshbabu8@gmail.com
+- **Phone**: +91 7670895485
+- **Location**: Coimbatore, 641402, Kannampalayam
+
+When visitors submit the contact form, you will receive an email at mannamganeshbabu8@gmail.com with their message. The email will include:
+- The visitor's name
+- The visitor's email address
+- **The full content of their message from the textarea**
+- Proper reply-to headers so you can easily respond
+
+### Setting Up EmailJS Template
+
+To ensure the contact form works correctly:
+1. Follow the instructions in [EMAILJS_TEMPLATE_SETUP.md](EMAILJS_TEMPLATE_SETUP.md)
+2. Make sure your EmailJS template uses the correct parameter names:
+   - `from_name` for the sender's name
+   - `from_email` for the sender's email
+   - `message` for the textarea content (this is what you're asking about)
+   - `to_email` for your email address
+   - `reply_to` for proper reply functionality
+
+### Troubleshooting Email Issues
+
+If you encounter authentication errors with EmailJS:
+1. Check [EMAILJS_GMAIL_FIX.md](EMAILJS_GMAIL_FIX.md) for solutions
+2. The most common issue is insufficient Gmail authentication scopes
+3. You may need to re-authenticate your Gmail account or use EmailJS SMTP service
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/82482a5d-665f-47f7-9da5-97310414d1c9) and click on Share -> Publish.

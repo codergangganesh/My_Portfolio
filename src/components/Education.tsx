@@ -1,45 +1,27 @@
 import { Card } from "@/components/ui/card";
-import { GraduationCap, Award, BookOpen, Trophy } from "lucide-react";
+import { GraduationCap, BookOpen } from "lucide-react";
 
 const Education = () => {
   const timeline = [
     {
-      year: "2021 - Present",
-      title: "B.Eng in AI & Computer Engineering",
-      institution: "University Name",
+      year: "2025 - Present",
+      title: "B.Tech Engineering in AI & DS",
+      institution: "KIT-Kalaignarkarunanidhi Institute of Technology",
       description:
-        "Specializing in Artificial Intelligence, Machine Learning, and Computer Engineering with focus on deep learning, robotics, and intelligent systems.",
-      gpa: "3.8/4.0",
+        "Specializing in Artificial Intelligence",
+      gpa: "8.49/10.0",
       icon: GraduationCap,
       gradient: "from-primary to-accent",
     },
     {
-      year: "2023 - Present",
-      title: "AI Research Assistant",
-      institution: "University AI Research Lab",
-      description:
-        "Contributing to cutting-edge research in deep learning, computer vision, and neural architecture search. Published papers in leading conferences.",
+      year: "2024",
+      title: "Diploma in Electronics and Communication Engineering",
+      institution: "Sri Ranganathar Institute of Polytechnic College ",
+      gpa: "9.3/10.0",
       icon: BookOpen,
       gradient: "from-accent to-purple-500",
     },
-    {
-      year: "2023",
-      title: "Best AI Innovation Award",
-      institution: "University Engineering Excellence",
-      description:
-        "Awarded for outstanding achievement in AI research and development of novel neural network architectures for real-time applications.",
-      icon: Award,
-      gradient: "from-purple-500 to-primary",
-    },
-  ];
-
-  const certifications = [
-    { name: "Deep Learning Specialization", org: "deeplearning.ai" },
-    { name: "Machine Learning Engineer", org: "Coursera" },
-    { name: "AWS Machine Learning", org: "Amazon Web Services" },
-    { name: "TensorFlow Developer Certificate", org: "Google" },
-    { name: "Advanced Computer Vision", org: "Stanford Online" },
-    { name: "Natural Language Processing", org: "Hugging Face" },
+    
   ];
 
   return (
@@ -56,10 +38,8 @@ const Education = () => {
             </span>
           </div>
           <h2 className="text-5xl md:text-7xl font-black mb-6">
-            Education &{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Achievements
-            </span>
+            Education {" "}
+            
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Building expertise through continuous learning and innovation
@@ -67,7 +47,7 @@ const Education = () => {
         </div>
 
         {/* Timeline */}
-        <div className="space-y-6 mb-16">
+        <div className="space-y-6">
           {timeline.map((item, index) => (
             <Card
               key={index}
@@ -102,35 +82,6 @@ const Education = () => {
             </Card>
           ))}
         </div>
-
-        {/* Certifications Grid */}
-        <Card className="p-8 bg-card/50 backdrop-blur-xl border-border/50 hover:border-primary/30 transition-all duration-500 animate-fade-in">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-glow">
-              <Trophy className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="text-2xl font-bold">Certifications & Training</h3>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="group p-5 bg-secondary/30 backdrop-blur-sm rounded-xl hover:bg-secondary/50 transition-all duration-300 border border-border/30 hover:border-primary/30 hover:shadow-glow cursor-pointer"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-gradient-primary rounded-full mt-2 group-hover:scale-150 transition-transform" />
-                  <div>
-                    <div className="font-semibold text-sm mb-1 group-hover:text-primary transition-colors">
-                      {cert.name}
-                    </div>
-                    <div className="text-xs text-muted-foreground">{cert.org}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Card>
       </div>
     </section>
   );

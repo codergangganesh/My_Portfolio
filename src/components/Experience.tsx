@@ -10,40 +10,53 @@ type ExperienceItem = {
 const experiences: ExperienceItem[] = [
   {
     role: "Frontend Developer",
-    company: "Acme Corp",
-    period: "2023 — Present",
+    company: "Learn Logicify LLC",
+    period: "2024",
     bullets: [
-      "Built modern UI with React and Tailwind, improving Lighthouse scores by 25%",
+      "Built modern UI with HTML,CSS,JS",
       "Implemented accessible, reusable component patterns",
-      "Collaborated with backend to design type-safe APIs",
     ],
-    logoSrc: "/logos/acme.png",
-    companyUrl: "https://example.com",
+    logoSrc: "learnlogicifyimage.png",
+    companyUrl: "",
   },
   {
-    role: "AI Intern",
-    company: "Innotech Labs",
-    period: "2022 — 2023",
+    role: "Data Science Intern",
+    company: "NXT Logic Solutions",
+    period: "2023",
     bullets: [
-      "Prototyped ML features with Python and TensorFlow",
-      "Automated data pipelines and evaluation tooling",
-      "Presented insights to stakeholders with clear visualizations",
+      "Python based data analysis",
+      "Data visualization",
     ],
-    logoSrc: "/logos/innotech.png",
-    companyUrl: "https://example.com",
+    logoSrc: "nxtlogicsolutionsimage.png",
+    companyUrl: "https://www.nxtlogic.com/",
   },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-end justify-between mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold">Experience</h2>
-            <div className="h-0.5 w-24 bg-gradient-primary rounded-full" />
+    <section id="experience" className="py-20 px-4 md:py-32 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+      
+      <div className="container mx-auto max-w-7xl relative z-10">
+        <div className="text-center mb-16 md:mb-24">
+          <div className="inline-block mb-4">
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
+              Professional Journey
+            </span>
           </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
+            Work{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              Experience
+            </span>
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Professional roles and key contributions across various organizations
+          </p>
+        </div>
 
+        <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* timeline rail */}
             <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-px bg-border" aria-hidden />

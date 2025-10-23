@@ -9,24 +9,28 @@ const About = () => {
       title: "AI Specialist",
       description: "Deep learning, neural networks, and intelligent systems",
       gradient: "from-primary to-accent",
+      detail: "Specializing in machine learning algorithms and neural network architectures. Experienced in computer vision, natural language processing, and reinforcement learning applications."
     },
     {
       icon: Code2,
       title: "Full-Stack Dev",
       description: "Modern web technologies and scalable architectures",
       gradient: "from-accent to-primary",
+      detail: "Proficient in building responsive web applications with React, Node.js, and cloud services. Experienced in both frontend and backend development with a focus on user experience."
     },
     {
       icon: Zap,
       title: "Problem Solver",
       description: "Complex engineering challenges with innovative solutions",
       gradient: "from-primary to-purple-500",
+      detail: "Approach complex problems with analytical thinking and creative solutions. Experienced in debugging, optimization, and system design for scalable applications."
     },
     {
       icon: Rocket,
       title: "Fast Learner",
       description: "Constantly exploring cutting-edge technologies",
       gradient: "from-purple-500 to-primary",
+      detail: "Quickly adapt to new technologies and frameworks. Passionate about staying current with industry trends and applying new knowledge to real-world projects."
     },
   ];
 
@@ -90,20 +94,26 @@ const About = () => {
             </Card>
           </div>
 
-          {/* Right Column - Highlights Grid */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* Right Column - Highlights Grid (Static Cards) */}
+          <div className="grid grid-cols-2 gap-6">
             {highlights.map((item, index) => (
-              <Card
+              <Card 
                 key={index}
-                className="p-6 bg-card/50 backdrop-blur-xl border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-glow group cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="p-6 bg-card/50 backdrop-blur-xl border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-glow group h-[280px] flex flex-col"
               >
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 shadow-glow`}>
-                  <item.icon className="w-6 h-6 text-white" />
+                <div className="flex items-center gap-4 mb-4">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center`}>
+                    <item.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-lg text-primary">{item.title}</h3>
                 </div>
-                <h3 className="font-bold mb-2 text-lg">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                
+                <p className="text-sm text-muted-foreground mb-4 flex-grow">
                   {item.description}
+                </p>
+                
+                <p className="text-xs text-muted-foreground">
+                  {item.detail}
                 </p>
               </Card>
             ))}
