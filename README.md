@@ -1,6 +1,7 @@
 # Professional Portfolio Website
 
-![Portfolio Preview](public/placeholder.svg)
+<img width="1326" height="825" alt="image" src="https://github.com/user-attachments/assets/8b2748a6-d5e7-4fa9-bc6c-1e29d0a83b15" />
+
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Showcases projects, skills, experience, and certifications with elegant UI components.
 
@@ -92,23 +93,8 @@ The contact form uses EmailJS to send real emails. To configure:
    - `to_email` - Your email address
    - `reply_to` - Reply-to header
 
-## 🌐 Deployment
 
-Deploy directly from Lovable:
 
-1. Open your [Lovable Project](https://lovable.dev/projects/82482a5d-665f-47f7-9da5-97310414d1c9)
-2. Click on Share → Publish
-
-### Custom Domain
-
-To connect a custom domain:
-1. Navigate to Project > Settings > Domains
-2. Click Connect Domain
-3. Follow the DNS configuration instructions
-
-## 📄 License
-
-This project is proprietary and confidential. All rights reserved.
 
 ## 👤 Author
 
