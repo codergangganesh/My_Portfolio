@@ -10,6 +10,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Responsive Design**: Works seamlessly across all devices
 - **Modern UI**: Clean, professional design with smooth animations
 - **Interactive Components**: Flip cards, typing animations, and hover effects
+
 - **Contact Form**: Functional email system using EmailJS
 - **Performance Optimized**: Fast loading and smooth navigation
 
@@ -78,6 +79,15 @@ src/
 ├── pages/            # Page components
 └── App.tsx           # Main application component
 ```
+
+### Key Components
+
+
+- **Certifications.tsx**: Shows professional certifications
+- **Contact.tsx**: Interactive contact form with EmailJS integration
+- **Hero.tsx**: Animated hero section with typing effect
+- **Projects.tsx**: Interactive project showcase with flip cards
+- **Skills.tsx**: Skill visualization with animated progress bars
 
 ## 📧 Contact Form Setup
 
